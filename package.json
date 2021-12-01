@@ -1,0 +1,19 @@
+{
+  "name": "nattyp",
+  "version": "1.0.0",
+  "description": "foundations final",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nattyp1/CapstoneProject.git"
+  },
+  "author": "natalie perkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nattyp1/CapstoneProject/issues"
+  },
+  "homepage": "https://github.com/nattyp1/CapstoneProject#readme"
+}
