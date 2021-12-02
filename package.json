@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nattyp1/CapstoneProject/issues"
   },
-  "homepage": "https://github.com/nattyp1/CapstoneProject#readme"
+  "homepage": "https://github.com/nattyp1/CapstoneProject#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
