@@ -24,7 +24,7 @@ p {
     margin: 20px 200px;
 }
 
-h1 > span {
+h1 span {
     font-size: 16px;
     margin: 0 50px;
 }
@@ -66,9 +66,11 @@ h3 {
 }
 
 div button {
+    text-shadow: lavender;
+    text-decoration-color: lightblue;
     padding: 10px 15px;
     border: none;
-    background-color: rgb(56, 20, 214);
+    background-color: rgb(194, 51, 7);
     color: white;
     border-radius: 20px;
 }
