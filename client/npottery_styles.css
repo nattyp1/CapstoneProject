@@ -1,70 +1,209 @@
-.carousel {
-  position: relative;
-  height: 600px;
-  width: 80%;
-  margin: 0 auto;
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+body, html {
+    padding: 0;
+    margin: 0;
+    background: #53adf2;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.picContainer {
+    position: absolute;
+    width: 650px;
+    height: 400px;
+    border: 8px solid #ffffff;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0px 50px 100px #4ab006;
+}
+img {
+    width: 650px;
+    height: 400px;
+    transition: 1s;
+}   
+.img {
+    width: 650px;
+    height: 400px;
+    position: absolute;
+    z-index: 0;
+    transition: 1s;
+}
+.right {
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    z-index: 1;
+    cursor: pointer;
+    color: #fff;
+    transition: 1s;
+    right:0;
+    top:0;
+}
+.right:hover{
+    background: rgba(0, 0, 0, 0.25)
+}
+.right:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    font-size: 50px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0.75);
+    margin-right: 10px;
+    transition: .5s;
+}
+.right:hover:before{
+     transform: translateY(-50%) scale(1);
+}
+.left {
+    position: relative;
+    height: 100%;
+    width: 60px;
+    z-index: 1;
+    cursor: pointer;
+    color: #fff;
+    transition: 1s;
+}
+.left:hover{
+    background: rgba(0, 0, 0, 0.25)
+}
+.left:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f104";
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0.75);
+    margin-left: 10px;
+    transition: .5s;
+}
+.left:hover:before{
+     transform: translateY(-50%) scale(1);
+}
+input{
+    position: absolute;
+    top: 0;
+     left: -200px;
+}
+h2 {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.75);
+    top: -160px;
+    left: 60%;
+    border: black;
+    transform: translateX(-50%);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 36px;
+    width: 70%;
+}
+.dot{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 0px 0px 5px #fff;
+}
+.dot.a1{margin-left:-30px}
+.dot.a2{margin-left:-10px}
+.dot.a3{margin-left:10px}
+.dot.a1:hover{background:#fff}
+.dot.a2:hover{background:#fff}
+.dot.a3:hover{background:#fff}
+
+#info {
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.75);
 }
 
-.carousel__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+/* registration button */
 
-.carousel__track-container {
-  background: #00ffdd;
-  height: 100%;
-  position: relative;
-}
-
-.carousel__track {
-  padding:0;
-  margin: 0;
-  list-style: none;
-}
-
-.carousel__slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-.carousel__button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-
-}
-.carousel__button--left{
-  left: -40px;
-}
-.carousel__button--right{
-  right: -40px;
-}
-
-.carousel__button img{
-  width: 12px;
-}
-
-.carousel__nav{
-  background:white ;
-  display: block;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.carousel__indicator {
-  border:0; 
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background: rgba(0,0,0, .3);
-  margin: 0 12px;
-}
-
-.carousel__indicator.current-slide{
-  background:rgba(0,0,0, .75) ;
-}
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  
+  .form-popup {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 99;
+  }
+  
+ /* /Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 20 px 50 px 20 px 20 px;
+    position: relative;
+  
+    z-index: 99;
+    background-color: white;
+  } 
+  input[type=text]{
+    object-fit: contain;
+  }
+  /* Full-width input fields */
+  .form-container input[type=text]{
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  } 

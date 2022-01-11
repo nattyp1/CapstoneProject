@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Natalie's Pottery</title>
-  <link rel="stylesheet" href="npottery_styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalie's Pottery</title>
+    <link href="npottery_styles.css" rel="stylesheet">
+    
 </head>
-<!-- <h1>some work</h1> -->
 <body>
-   <div class="carousel">
-    <button class = "carousel__button carousel__button--left">
-        <img src ="../img/left_arrow.svg" alt = "arrow pointing left"></button>
-
-    <div class= "carousel__track-container">
-      <ul class = "carousel__track">
-          <li class ="carousel__slide">
-            <img class = "carousel__image" src = "../img/dec_2021.jpg" alt="handpainted insence holders with multiple designs shaped of flowers">
-          </li>
-          <li class ="carousel__slide">
-            <img class = "carousel__image" src = "../img/ohwhale.jpg" alt="ceramic plate with clouds on it ">
-          </li>
-          <li class ="carousel__slide">
-            <img class = "carousel__image" src = "../img/IMG_6042.jpg" alt="photo of blue bowl shaped of a whale">
-          </li>  
-      </ul>
-    </div>
-
-  <button class="carousel__button carousel__button--right">
-      <img src="../img/right_arrow.svg" alt="arrow pointing right">
-  </button>
-
-  <div class="carousel__nav">
-    <button class = "carousel__indicator current-slide"></button>
-    <button class = "carousel__indicator"></button>
-    <button class = "carousel__indicator"></button>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
    
-    </div>
-   </div>
-    <script src="npottery_index.js"></script>
-<body/>
-<html/>  
+    <div class="picContainer">
+            <h2>Natalie's Pottery</h2>
+            <div id="info"></div>
+            <div id="image1" class="img">
+                <img src="../img/dec_2021.jpg" />
+            </div>
+            <div id="image2" class="img">
+                <img src="../img/IMG_6042.jpg" />
+            </div>
+            <div id="image3" class="img">
+                <img src="../img/ohwhale.jpg" />
+            </div>
+            
+            <div class="left" onclick="prevImg()"></div>
+            <div class="right" onclick="nextImg()"></div>
+            <div class="dots">
+                <div class="dot a1"></div>
+                <div class="dot a2"></div>
+                <div class="dot a3"></div>
+            </div>
+        </div>
+<!-- popup registration button  -->
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Let's Work Together</h1>
+
+    <label for="name"><b>name</b></label>
+    <input type="text" placeholder="Enter Name" name="fn_ln" required>
+
+    <label for="number"><b>number</b></label>
+    <input type="text" placeholder="Enter number" name="number" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="text box"><b>Request</b></label>
+    <input type="text" placeholder="Enter Project Request" name="request" required>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+      <script>
+      function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+          
+    src="npottery_index.js"</script> 
+    
+</body>
+</html>
+ 
+
 
